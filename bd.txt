@@ -1,0 +1,37 @@
+Таблица "Виды конфет":
+id INT(11) AUTO_INCREMENT PRIMARY KEY;
+name VARCHAR(100);
+
+Таблица "Поставщики":
+id INT(11) AUTO_INCREMENT PRIMARY KEY;
+name VARCHAR(100);
+phone VARCHAR(20);
+
+Таблица "Торговые точки":
+id INT(11) AUTO_INCREMENT PRIMARY KEY;
+name VARCHAR(100);
+address VARCHAR(100);
+phone VARCHAR(20);
+
+Таблица "Журнал поступления товара":
+id INT(11) AUTO_INCREMENT PRIMARY KEY;
+candy_id INT(11);
+supplier_id INT(11);
+amount INT(11);
+
+Таблица "Журнал отпуска товара":
+id INT(11) AUTO_INCREMENT PRIMARY KEY;
+candy_id INT(11);
+store_id INT(11);
+amount INT(11);
+date_sold DATE;
+
+alter table ProductReceipt add FOREIGN KEY (candy_id) REFERENCES candies(id);
+alter table ProductReceipt add FOREIGN KEY (supplier_id) REFERENCES suppliers(id);
+alter table ProductRelease add FOREIGN KEY (candy_id) REFERENCES candies(id);
+alter table ProductRelease add FOREIGN KEY (store_id) REFERENCES stores(id);
+
+ALTER TABLE ProductRelease ADD CONSTRAINT fk_candie FOREIGN KEY (candy_id) REFERENCES candies(id) ON DELETE CASCADE;
+ALTER TABLE ProductRelease ADD CONSTRAINT fk_stores FOREIGN KEY (store_id) REFERENCES stores(id) ON DELETE CASCADE;
+ALTER TABLE ProductReceipt ADD CONSTRAINT fk_candie2 FOREIGN KEY (candy_id) REFERENCES candies(id) ON DELETE CASCADE;
+ALTER TABLE ProductReceipt ADD CONSTRAINT fk_supplies FOREIGN KEY (supplier_id) REFERENCES suppliers(id) ON DELETE CASCADE;

@@ -1,0 +1,111 @@
+table {
+    font-size: 30px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    padding: 0;
+}
+
+.Headings {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 55px;
+    border-bottom: 4px solid black;
+}
+
+.currentPage {
+    text-decoration-line: overline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-family: cursive;
+}
+
+.Item-Headings{
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    background-image: url('../images/background.jpeg');
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrap {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.formWrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+label {
+    font-size: 25px;
+    font-family: segoe print;
+}
+
+.inputStyle {
+  width:20%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:15px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inputStyleTable {
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:15px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-right: 5px;
+}
+
+.input-button {
+    width: 10%;
+    line-height: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.tableWrap {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputTable {
+    text-align: center;
+    line-height: 0;
+    margin: 5px;
+}
